@@ -60,6 +60,12 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spa
 .nav-cta{white-space:nowrap}
 .nav-burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
 .nav-burger span{width:24px;height:1.5px;background:var(--ink);transition:.25s}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang-sw{display:flex;align-items:center;gap:1px;border:1px solid var(--line);padding:2px}
+.lang-sw button{border:0;background:transparent;cursor:pointer;font-family:var(--sans);
+  font-size:.66rem;font-weight:500;letter-spacing:.12em;color:var(--muted);padding:6px 8px;line-height:1;transition:.15s}
+.lang-sw button:hover{color:var(--emerald)}
+.lang-sw button.on{background:var(--emerald);color:#fff}
 
 /* ══ HERO ═════════════════════════════════════════════════════════ */
 .hero{max-width:var(--maxw);margin:0 auto;padding:70px 40px 90px;
