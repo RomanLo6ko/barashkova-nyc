@@ -136,7 +136,7 @@ section{position:relative}
 .teaser .txt h2{font-size:clamp(2rem,3.4vw,2.8rem);margin-bottom:18px}
 .teaser .txt p{color:var(--muted);font-weight:300;margin-bottom:16px}
 .teaser .art{position:relative;text-align:center}
-.teaser .art img{width:150px;height:150px;object-fit:contain;opacity:.9}
+.teaser .art img{width:100%;max-width:360px;height:auto;object-fit:contain;opacity:.92}
 
 /* CTA band */
 .cta-band{text-align:center;padding:110px 40px}
