@@ -58,7 +58,9 @@
     <p class="form-note" style="margin-top:24px" data-i18n="ct.note1">Prefer email? Write to us directly and attach any inspiration or reference images.</p>
   </div>
 
-  <form class="enquiry" id="enquiry">
+  <form class="enquiry" method="POST" action="https://formsubmit.co/barashkova7734848@gmail.com">
+    <input type="hidden" name="_subject" value="Consultation enquiry from barashkova.nyc">
+    <input type="hidden" name="_captcha" value="false">
     <div class="field"><label for="f-name" data-i18n="form.name">Name</label><input id="f-name" name="name" type="text" required></div>
     <div class="field"><label for="f-email" data-i18n="form.email">Email</label><input id="f-email" name="email" type="email" required></div>
     <div class="field"><label for="f-phone" data-i18n="form.phone">Phone</label><input id="f-phone" name="phone" type="tel"></div>
@@ -80,7 +82,7 @@
       </select></div>
     <div class="field"><label for="f-msg" data-i18n="form.msg">Message</label><textarea id="f-msg" name="message" data-i18n-ph="form.msg.ph" placeholder="Tell us about your occasion, date and any references…"></textarea></div>
     <button type="submit" class="btn btn-fill" style="width:100%" data-i18n="form.send">Send Enquiry</button>
-    <p class="form-note" id="formNote" data-i18n="form.note2">Your message opens in your email app, addressed to the atelier.</p>
+    <p class="form-note" id="formNote" data-i18n="form.note2">Your enquiry will be sent to the atelier securely.</p>
   </form>
 </section>
 
@@ -96,18 +98,6 @@
 <script src="i18n.js"></script>
 <script>
 (function(){var b=document.getElementById('navBurger'),m=document.getElementById('navMenu');b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');});});})();
-(function(){
-  var f=document.getElementById('enquiry');
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    var g=function(id){return (document.getElementById(id).value||'').trim();};
-    var name=g('f-name'),email=g('f-email'),phone=g('f-phone'),
-        svc=document.getElementById('f-service').value,fmt=document.getElementById('f-format').value,msg=g('f-msg');
-    var subject='Consultation enquiry — '+(name||'ATELLOR');
-    var body='Name: '+name+'\nEmail: '+email+'\nPhone: '+phone+'\nService: '+svc+'\nPreferred format: '+fmt+'\n\nMessage:\n'+msg+'\n\n— sent from barashkova.nyc';
-    window.location.href='mailto:barje44@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-  });
-})();
 </script>
 </body>
 </html>
